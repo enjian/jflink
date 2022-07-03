@@ -80,7 +80,8 @@ public class DelayDynamicTableFactoryTest {
                         .map(Row::toString)
                         .sorted()
                         .collect(Collectors.toList());
-        System.out.println(result);
+//        System.out.println(result);
+//        System.out.println(env.getExecutionPlan());
 
 //
 //        List<String> expected =

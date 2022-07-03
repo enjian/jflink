@@ -89,7 +89,7 @@ public class KeyByLookupJoinRunner extends ProcessFunction<RowData, RowData> {
                         BasicTypeInfo.LONG_TYPE_INFO, new ListTypeInfo<>(RetryJoinElement.class))
         );
     }
-
+// 处理每条数据
     @Override
     public void processElement(RowData in, Context ctx, Collector<RowData> out) throws Exception {
         collector.setCollector(out);

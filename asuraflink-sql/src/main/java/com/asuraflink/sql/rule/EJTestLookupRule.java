@@ -2,21 +2,20 @@ package com.asuraflink.sql.rule;
 
 import com.asuraflink.sql.delay.DelayedJoinTest;
 import com.asuraflink.sql.utils.RuleUtils;
-import lombok.val;
 import org.apache.flink.api.java.tuple.Tuple2;
 import org.apache.flink.streaming.api.datastream.DataStreamSource;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.apache.flink.table.api.EnvironmentSettings;
 import org.apache.flink.table.api.Table;
 import org.apache.flink.table.api.bridge.java.StreamTableEnvironment;
+import org.apache.flink.table.calcite.CalciteConfig;
 import org.apache.flink.table.planner.calcite.CalciteConfigBuilder;
-import org.apache.flink.table.planner.plan.optimize.program.*;
-import org.apache.flink.table.planner.calcite.CalciteConfig;
-
+import org.apache.flink.table.planner.plan.optimize.program.FlinkChainedProgram;
+import org.apache.flink.table.planner.plan.optimize.program.StreamOptimizeContext;
 
 import static org.apache.flink.table.api.Expressions.$;
 
-public class AddMyLookupRule {
+public class EJTestLookupRule {
 
 //    public static final String JOIN_KEY = "flink-join";
     public static final String JOIN_KEY = "flink-delay-join";
@@ -30,21 +29,19 @@ public class AddMyLookupRule {
                 EnvironmentSettings.newInstance().useBlinkPlanner().inStreamingMode().build();
         StreamTableEnvironment tEnv = StreamTableEnvironment.create(env, envSettings);
 
-        // ---------------------------- 添加自定义规则 ----------------------------
-//        FlinkChainedProgram<StreamOptimizeContext> program =
-//                RuleUtils.apply(tEnv)
-//                        .addLookupKeyBy()
-//                        .addBroadcastTemporalLookupJoinRule()
-//                        .build();
-
-//        RuleUtils.setUpCurrentRule(tEnv, BroadcastTemporal.LOOKUP_BROADCAST_JOIN_WITH_FILTER());
-
         // 开启 keyby
         tEnv.getConfig().getConfiguration().setBoolean(RuleUtils.LOOKUP_KEY_BY_ENABLE(), true);
 
-//
-//        CalciteConfig cc = new CalciteConfigBuilder().replaceStreamProgram(program).build();
-//        tEnv.getConfig().setPlannerConfig(cc);
+
+        // ---------------------------- 添加自定义规则 ----------------------------
+        //处理join的规则，采用hash join 提高命中
+        RuleUtils.replaceStreamProgram(tEnv,RuleUtils.apply(tEnv)
+                .addLookupKeyBy()
+                .addBroadcastTemporalLookupJoinRule()
+                .build());
+
+        RuleUtils.setUpCurrentRule(tEnv, BroadcastTemporal.LOOKUP_BROADCAST_JOIN_WITH_FILTER());
+
 
         DataStreamSource<Tuple2<String, String>> continueSource = env.addSource(new DelayedJoinTest.ContinueSource());
         Table t = tEnv.fromDataStream(continueSource,
@@ -80,6 +77,8 @@ public class AddMyLookupRule {
         System.out.println(env.getExecutionPlan());
 
         tEnv.executeSql(sqlQuery).collect();
+
+
 
         tEnv.execute("AddMyLookupRule");
     }
