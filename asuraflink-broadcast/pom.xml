@@ -94,5 +94,11 @@
             <version>8.0.20</version>
 <!--            <scope>test</scope>-->
         </dependency>
+        <dependency>
+            <groupId>com.asura</groupId>
+            <artifactId>asuraflink-sql</artifactId>
+            <version>0.1</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
 </project>

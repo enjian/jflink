@@ -40,7 +40,7 @@ public class EJTestLookupRule {
                 .addBroadcastTemporalLookupJoinRule()
                 .build());
 
-        RuleUtils.setUpCurrentRule(tEnv, BroadcastTemporal.LOOKUP_BROADCAST_JOIN_WITH_FILTER());
+//        RuleUtils.setUpCurrentRule(tEnv, BroadcastTemporal.LOOKUP_BROADCAST_JOIN_WITH_FILTER());
 
 
         DataStreamSource<Tuple2<String, String>> continueSource = env.addSource(new DelayedJoinTest.ContinueSource());

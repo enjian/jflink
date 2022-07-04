@@ -22,11 +22,11 @@ public class BroadCastStream {
 
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
         Properties kafkaProperties = new Properties();
-        kafkaProperties.put("bootstrap.servers","localhost:9092");
+        kafkaProperties.put("bootstrap.servers","10.88.21.13:9092,10.88.21.14:9092,10.88.21.15:9092");
         kafkaProperties.put("group.id","broadcast-groupId");
 
         FlinkKafkaConsumer<String> kafkaConsumer =
-                new FlinkKafkaConsumer<>("broadcast-topic", new SimpleStringSchema(), kafkaProperties);
+                new FlinkKafkaConsumer<>("enjian_test", new SimpleStringSchema(), kafkaProperties);
         kafkaConsumer.setStartFromLatest();
 
         DataStream<String> kafkaSource = env.addSource(kafkaConsumer).name("KafkaSource").uid("source-id-kafka-source");
