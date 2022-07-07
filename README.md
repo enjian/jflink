@@ -8,8 +8,6 @@
 * [Flink数据交换](https://github.com/Asura7969/asuraflink/blob/main/doc/Flink%E4%B8%ADtask%E4%B9%8B%E9%97%B4%E7%9A%84%E6%95%B0%E6%8D%AE%E4%BA%A4%E6%8D%A2%E6%9C%BA%E5%88%B6.md)
 
 
-[asura7969 个人博客](https://asura7969.github.io/)
-
 # Flink sql
 
 flink版本 : 1.12.0
