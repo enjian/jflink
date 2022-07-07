@@ -4,7 +4,6 @@ import org.apache.calcite.avatica.util.Casing;
 import org.apache.calcite.avatica.util.Quoting;
 import org.apache.calcite.sql.SqlNode;
 import org.apache.calcite.sql.parser.SqlParser;
-import org.apache.calcite.sql.parser.impl.ExampleSqlParserImpl;
 import org.apache.calcite.sql.parser.impl.SqlParserImpl;
 import org.apache.calcite.sql.validate.SqlConformanceEnum;
 import org.apache.calcite.tools.FrameworkConfig;
@@ -19,7 +18,7 @@ public class ExampleParser {
     public static void main(String[] args) {
         FrameworkConfig config = Frameworks.newConfigBuilder()
                 .parserConfig(SqlParser.configBuilder()
-                        .setParserFactory(ExampleSqlParserImpl.FACTORY)
+                        .setParserFactory(SqlParserImpl.FACTORY)
                         // 设置大小写是否敏感
                         .setCaseSensitive(false)
                         // 设置应用标识,mysql是``

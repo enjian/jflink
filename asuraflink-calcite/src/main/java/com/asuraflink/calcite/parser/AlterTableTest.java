@@ -7,7 +7,7 @@ import org.apache.calcite.rel.hint.RelHint;
 import org.apache.calcite.sql.*;
 import org.apache.calcite.sql.parser.SqlParseException;
 import org.apache.calcite.sql.parser.SqlParser;
-import org.apache.calcite.sql.parser.impl.ExampleSqlParserImpl;
+import org.apache.calcite.sql.parser.impl.SqlParserImpl;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -18,7 +18,7 @@ public class AlterTableTest {
 
         SqlParser.Config mysqlConfig = SqlParser.configBuilder()
                 // 定义解析工厂
-                .setParserFactory(ExampleSqlParserImpl.FACTORY)
+                .setParserFactory(SqlParserImpl.FACTORY)
                 .setLex(Lex.MYSQL)
                 .build();
         // 创建解析器

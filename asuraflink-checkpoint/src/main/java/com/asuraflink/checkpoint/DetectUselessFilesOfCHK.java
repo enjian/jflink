@@ -4,7 +4,7 @@ import org.apache.flink.runtime.checkpoint.Checkpoints;
 import org.apache.flink.runtime.checkpoint.OperatorState;
 import org.apache.flink.runtime.checkpoint.OperatorSubtaskState;
 //import org.apache.flink.runtime.checkpoint.metadata.MetadataSerializer;
-import org.apache.flink.runtime.checkpoint.savepoint.Savepoint;
+import org.apache.flink.runtime.checkpoint.metadata.CheckpointMetadata;
 import org.apache.flink.runtime.execution.librarycache.LibraryCacheManager;
 import org.apache.flink.runtime.state.*;
 import org.apache.flink.runtime.state.filesystem.FileStateHandle;
@@ -46,9 +46,9 @@ public class DetectUselessFilesOfCHK {
         BufferedInputStream bis = new BufferedInputStream(in);
         DataInputStream dis = new DataInputStream(bis);
 
-        Savepoint savepoint = Checkpoints.loadCheckpointMetadata(dis,
+        CheckpointMetadata savepoint = Checkpoints.loadCheckpointMetadata(dis,
 //                MetadataSerializer.class.getClassLoader());
-                LibraryCacheManager.class.getClassLoader());
+                LibraryCacheManager.class.getClassLoader(),null);
 
         // 打印当前的 CheckpointId
         System.out.println(savepoint.getCheckpointId());

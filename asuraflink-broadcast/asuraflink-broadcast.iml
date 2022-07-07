@@ -27,6 +27,10 @@
     <orderEntry type="library" name="Maven: org.apache.flink:flink-table-api-java:1.12.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.flink:flink-table-planner-blink_2.11:1.12.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.flink:flink-table-api-scala_2.11:1.12.0" level="project" />
+    <orderEntry type="library" name="Maven: org.scala-lang:scala-reflect:2.11.12" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.scala-lang:scala-compiler:2.11.12" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.scala-lang.modules:scala-xml_2.11:1.0.5" level="project" />
+    <orderEntry type="library" name="Maven: org.scala-lang.modules:scala-parser-combinators_2.11:1.0.4" level="project" />
     <orderEntry type="library" name="Maven: org.apache.flink:flink-table-api-java-bridge_2.11:1.12.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.flink:flink-table-api-scala-bridge_2.11:1.12.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.flink:flink-table-runtime-blink_2.11:1.12.0" level="project" />
@@ -58,6 +62,7 @@
     <orderEntry type="library" name="Maven: org.apache.flink:flink-shaded-zookeeper-3:3.4.14-12.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.commons:commons-lang3:3.3.2" level="project" />
     <orderEntry type="library" name="Maven: org.javassist:javassist:3.24.0-GA" level="project" />
+    <orderEntry type="library" name="Maven: org.scala-lang:scala-library:2.11.12" level="project" />
     <orderEntry type="library" name="Maven: com.typesafe.akka:akka-actor_2.11:2.5.21" level="project" />
     <orderEntry type="library" name="Maven: com.typesafe:config:1.3.3" level="project" />
     <orderEntry type="library" name="Maven: org.scala-lang.modules:scala-java8-compat_2.11:0.7.0" level="project" />
@@ -94,12 +99,24 @@
     <orderEntry type="library" name="Maven: org.mariadb.jdbc:mariadb-java-client:2.5.4" level="project" />
     <orderEntry type="library" name="Maven: mysql:mysql-connector-java:8.0.20" level="project" />
     <orderEntry type="library" name="Maven: com.google.protobuf:protobuf-java:3.6.1" level="project" />
+    <orderEntry type="module" module-name="asuraflink-sql" />
+    <orderEntry type="library" name="Maven: org.apache.flink:flink-runtime-web_2.11:1.12.0" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.flink:flink-json:1.12.0" level="project" />
+    <orderEntry type="library" name="Maven: org.projectlombok:lombok:1.18.4" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.bahir:flink-connector-redis_2.11:1.0" level="project" />
+    <orderEntry type="library" name="Maven: redis.clients:jedis:3.3.0" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.commons:commons-pool2:2.6.2" level="project" />
+    <orderEntry type="library" name="Maven: com.alibaba:fastjson:1.2.62" level="project" />
+    <orderEntry type="library" name="Maven: com.google.guava:guava:29.0-jre" level="project" />
+    <orderEntry type="library" name="Maven: com.google.guava:failureaccess:1.0.1" level="project" />
+    <orderEntry type="library" name="Maven: com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava" level="project" />
+    <orderEntry type="library" name="Maven: org.checkerframework:checker-qual:2.11.1" level="project" />
+    <orderEntry type="library" name="Maven: com.google.errorprone:error_prone_annotations:2.3.4" level="project" />
+    <orderEntry type="library" name="Maven: com.google.j2objc:j2objc-annotations:1.3" level="project" />
+    <orderEntry type="library" name="Maven: org.slf4j:slf4j-simple:1.6.6" level="project" />
+    <orderEntry type="library" name="Maven: JUnit:JUnit:4.12" level="project" />
+    <orderEntry type="library" name="Maven: org.hamcrest:hamcrest-core:1.3" level="project" />
     <orderEntry type="library" name="Maven: org.apache.flink:flink-scala_2.11:1.12.0" level="project" />
-    <orderEntry type="library" name="Maven: org.scala-lang:scala-reflect:2.11.12" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: org.scala-lang:scala-compiler:2.11.12" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: org.scala-lang.modules:scala-xml_2.11:1.0.5" level="project" />
-    <orderEntry type="library" name="Maven: org.scala-lang.modules:scala-parser-combinators_2.11:1.0.4" level="project" />
     <orderEntry type="library" name="Maven: org.apache.flink:flink-streaming-scala_2.11:1.12.0" level="project" />
-    <orderEntry type="library" name="Maven: org.scala-lang:scala-library:2.11.12" level="project" />
   </component>
 </module>
