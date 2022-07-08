@@ -18,6 +18,30 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="asuraflink-common" />
+    <orderEntry type="library" name="Maven: mysql:mysql-connector-java:8.0.19" level="project" />
+    <orderEntry type="library" name="Maven: com.google.protobuf:protobuf-java:3.6.1" level="project" />
+    <orderEntry type="library" name="Maven: io.vertx:vertx-jdbc-client:3.9.1" level="project" />
+    <orderEntry type="library" name="Maven: io.vertx:vertx-sql-common:3.9.1" level="project" />
+    <orderEntry type="library" name="Maven: io.vertx:vertx-core:3.9.1" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-common:4.1.49.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-buffer:4.1.49.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-transport:4.1.49.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-handler:4.1.49.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-codec:4.1.49.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-handler-proxy:4.1.49.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-codec-socks:4.1.49.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-codec-http:4.1.49.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-codec-http2:4.1.49.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-resolver:4.1.49.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-resolver-dns:4.1.49.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-codec-dns:4.1.49.Final" level="project" />
+    <orderEntry type="library" name="Maven: com.mchange:c3p0:0.9.5.4" level="project" />
+    <orderEntry type="library" name="Maven: com.mchange:mchange-commons-java:0.2.15" level="project" />
+    <orderEntry type="library" name="Maven: org.realityforge.org.jetbrains.annotations:org.jetbrains.annotations:1.5.0" level="project" />
+    <orderEntry type="library" name="Maven: org.scala-lang:scala-compiler:2.11.12" level="project" />
+    <orderEntry type="library" name="Maven: org.scala-lang.modules:scala-xml_2.11:1.0.5" level="project" />
+    <orderEntry type="library" name="Maven: org.scala-lang.modules:scala-parser-combinators_2.11:1.0.4" level="project" />
+    <orderEntry type="library" name="Maven: org.scala-lang:scala-library:2.11.12" level="project" />
     <orderEntry type="library" name="Maven: org.apache.flink:flink-core:1.12.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.flink:flink-annotations:1.12.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.flink:flink-metrics-core:1.12.0" level="project" />
@@ -71,10 +95,6 @@
     <orderEntry type="library" name="Maven: com.twitter:chill-java:0.7.6" level="project" />
     <orderEntry type="library" name="Maven: org.apache.flink:flink-streaming-scala_2.11:1.12.0" level="project" />
     <orderEntry type="library" name="Maven: org.scala-lang:scala-reflect:2.11.12" level="project" />
-    <orderEntry type="library" name="Maven: org.scala-lang:scala-library:2.11.12" level="project" />
-    <orderEntry type="library" name="Maven: org.scala-lang:scala-compiler:2.11.12" level="project" />
-    <orderEntry type="library" name="Maven: org.scala-lang.modules:scala-xml_2.11:1.0.5" level="project" />
-    <orderEntry type="library" name="Maven: org.scala-lang.modules:scala-parser-combinators_2.11:1.0.4" level="project" />
     <orderEntry type="library" name="Maven: org.apache.flink:flink-scala_2.11:1.12.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.flink:flink-clients_2.11:1.12.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.flink:flink-optimizer_2.11:1.12.0" level="project" />

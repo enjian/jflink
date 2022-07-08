@@ -94,6 +94,12 @@ public class DelayDynamicTableFactoryTest {
 
     }
 
+    @Test
+    public void  testGenerateData2Redis(){
+        generateDelayRedisSource();
+
+    }
+
     private void useDynamicTableFactory(
             StreamExecutionEnvironment env, StreamTableEnvironment tEnv) {
         DataStreamSource<Tuple2<String, String>> continueSource = env.addSource(new ContinueSource());
@@ -117,7 +123,7 @@ public class DelayDynamicTableFactoryTest {
         ScheduledExecutorService scheduledService = Executors.newSingleThreadScheduledExecutor();
         scheduledService.scheduleWithFixedDelay(() -> {
             int andIncrement = index.getAndIncrement();
-            if (andIncrement <= 6) {
+            if (andIncrement <= 36) {
                 jedis.hset(DELAY_JOIN_KEY, andIncrement + "-" + andIncrement, String.valueOf(andIncrement));
                 System.out.println("产生 redis 维表数据: " + andIncrement);
             } else {

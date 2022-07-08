@@ -1,7 +1,6 @@
 package com.asuraflink.sql.rule
 
 import java.util
-
 import com.asuraflink.sql.utils.RuleUtils
 import org.apache.calcite.plan.{RelOptRule, RelOptRuleCall}
 import org.apache.calcite.plan.RelOptRule.{any, operand}
@@ -35,6 +34,7 @@ class KeyByLookupRule extends RelOptRule(
     val keys = joinInfo.leftKeys
 
     val inputList = new util.ArrayList[RelNode]()
+//    将当前relnode 转化成目标relnode
     val newInput = satisfyDistribution(
       FlinkConventions.STREAM_PHYSICAL, execLookupJoin.getInput, FlinkRelDistribution.hash(keys, requireStrict = true))
     inputList.add(newInput)
